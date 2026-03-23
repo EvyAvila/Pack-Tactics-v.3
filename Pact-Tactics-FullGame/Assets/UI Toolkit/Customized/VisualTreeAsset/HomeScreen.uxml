@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Customized/Themes/stylized.uss?fileID=7433441132597879392&amp;guid=5e57063942337354c9a4db61b3a4d61b&amp;type=3#stylized" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.98);">
+        <ui:VisualElement name="Title" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/UI/Text/packtacticsidea%20v.9.png?fileID=2800000&amp;guid=97634ad3be4c54547813506080d1c866&amp;type=3#packtacticsidea v.9&quot;); height: 20%;" />
+        <ui:VisualElement name="ButtonLayout" focusable="false" style="flex-grow: 1; flex-direction: row; width: auto; height: auto;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayBtn" focusable="true" class="buttonLayout" style="background-image: url(&quot;project://database/Assets/Art/UI/Buttons/pncui4.png?fileID=2800000&amp;guid=f4d86d99a51711842874d761b66eae8f&amp;type=3#pncui4&quot;);">
+                <ui:Label tabindex="-1" text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" class="textDisplay" />
+            </ui:Button>
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsBtn" class="buttonLayout" style="background-image: url(&quot;project://database/Assets/Art/UI/Buttons/pncui4.png?fileID=2800000&amp;guid=f4d86d99a51711842874d761b66eae8f&amp;type=3#pncui4&quot;);">
+                <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" class="textDisplay" />
+            </ui:Button>
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitBtn" class="buttonLayout" style="background-image: url(&quot;project://database/Assets/Art/UI/Buttons/pncui4.png?fileID=2800000&amp;guid=f4d86d99a51711842874d761b66eae8f&amp;type=3#pncui4&quot;);">
+                <ui:Label tabindex="-1" text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" class="textDisplay" />
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
