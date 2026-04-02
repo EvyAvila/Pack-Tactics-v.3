@@ -38,6 +38,8 @@ public class HomeMenu : BaseMenu
     private void OpenSettings(ClickEvent evt)
     {
         Debug.Log("Open settings");
+        SceneTransitionManager.Instance.LoadAsyncScene("Settings");
+
     }
 
     private void QuitGame(ClickEvent evt)

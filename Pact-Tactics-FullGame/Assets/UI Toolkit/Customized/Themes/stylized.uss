@@ -3,24 +3,35 @@
     height: 68%;
     margin-right: 60px;
     margin-left: 70px;
-    color: rgb(255, 255, 255);
-    font-size: 75px;
-    -unity-text-align: middle-center;
-    text-overflow: clip;
-    white-space: normal;
-    -unity-font-style: normal;
     background-color: rgba(0, 0, 0, 0);
     -unity-background-scale-mode: scale-to-fit;
+    font-size: 72px;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Art/UI/Buttons/pncui4.png?fileID=2800000&guid=f4d86d99a51711842874d761b66eae8f&type=3#pncui4");
 }
 
 .textDisplay {
+    top: 24%;
+    color: rgb(255, 249, 249);
+    position: absolute;
+    flex-grow: 1;
     align-self: center;
-    top: 80px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom: 52%;
+    flex-shrink: 1;
     -unity-font-style: italic;
+    -unity-text-align: upper-center;
+    max-width: 160%;
+    right: 52%;
+    left: 52%;
 }
 
 .buttonLayout:hover {
     -unity-background-image-tint-color: rgba(182, 120, 246, 0.84);
     transition-duration: 0.5s;
-    scale: 1 1;
 }

@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Customized/Themes/stylized.uss?fileID=7433441132597879392&amp;guid=5e57063942337354c9a4db61b3a4d61b&amp;type=3#stylized" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(112, 80, 255);">
+        <ui:Label tabindex="-1" text="SETTINGS SCREEN" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 50px;" />
+        <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitBtn" focusable="true" style="font-size: 47px; color: rgb(19, 19, 83);" />
+    </ui:VisualElement>
+</ui:UXML>
