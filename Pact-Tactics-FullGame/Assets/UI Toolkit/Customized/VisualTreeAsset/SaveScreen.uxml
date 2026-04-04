@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(175, 142, 255);">
+        <ui:Label tabindex="-1" text="SAVE SCREEN" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 50px;" />
+        <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitBtn" style="width: 257px; height: 140px; font-size: 52px;" />
+    </ui:VisualElement>
+</ui:UXML>
