@@ -3,16 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class HomeMenu : BaseMenu
+public class HomeMenu : AbstractMenuBase
 {
     private Button playBtn, settingBtn, quitBtn;
 
-    protected override void Awake()
-    {
-        scriptName = SceneScript.HomeMenu;
-    }
-
-    protected override void SetProperties()
+    public override void SetProperties()
     {
         playBtn = root.Q<Button>("PlayBtn");
         settingBtn = root.Q<Button>("SettingsBtn");
@@ -23,7 +18,7 @@ public class HomeMenu : BaseMenu
         quitBtn.RegisterCallback<ClickEvent>(QuitGame);
     }
 
-    protected override void UnSetProperties()
+    public override void UnSetProperties()
     {
         playBtn.UnregisterCallback<ClickEvent>(EnterGame);
         settingBtn.UnregisterCallback<ClickEvent>(OpenSettings);
@@ -32,14 +27,12 @@ public class HomeMenu : BaseMenu
 
     private void EnterGame(ClickEvent evt)
     {
-        Debug.Log("play game here");
+        StateManager.Instance.ChangeState(GameState.Game);
     }
 
     private void OpenSettings(ClickEvent evt)
     {
-        Debug.Log("Open settings");
-        SceneTransitionManager.Instance.LoadAsyncScene("Settings");
-
+        CustomizedEventActions.OnRequestSceneLoad?.Invoke(SceneType.Settings);
     }
 
     private void QuitGame(ClickEvent evt)

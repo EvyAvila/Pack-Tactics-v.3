@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class SettingMenu : AbstractMenuBase
+public class SaveMenu : AbstractMenuBase
 {
     private Button exitBtn;
 
@@ -14,13 +14,13 @@ public class SettingMenu : AbstractMenuBase
         exitBtn.RegisterCallback<ClickEvent>(ExitSettingsMenu);
     }
 
-    public override  void UnSetProperties()
+    public override void UnSetProperties()
     {
         exitBtn.UnregisterCallback<ClickEvent>(ExitSettingsMenu);
     }
 
     private void ExitSettingsMenu(ClickEvent evt)
     {
-        CustomizedEventActions.OnRequestUnloadScene?.Invoke(SceneType.Settings);
+        CustomizedEventActions.OnRequestUnloadScene?.Invoke(SceneType.Save);
     }
 }

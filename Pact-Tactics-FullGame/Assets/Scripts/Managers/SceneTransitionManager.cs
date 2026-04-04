@@ -2,37 +2,83 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.Linq;
+
+public enum SceneType { MainMenu, Gameplay, Settings, Save }
 
 public class SceneTransitionManager : MonoBehaviour
 {
-    public static SceneTransitionManager Instance;
+    //public static SceneTransitionManager Instance;
+
+    [SerializeField]
+    private List<SceneEntry> scenes;
+
+    private Dictionary<SceneType, string> sceneMap;
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        sceneMap = scenes.ToDictionary(s => s.type, s => s.sceneName);
+    }
+
+
+    private void OnEnable()
+    {
+        CustomizedEventActions.OnRequestSceneLoad += UpdateScene;
+        CustomizedEventActions.OnRequestUnloadScene += HideScene;
+    }
+
+    private void OnDisable()
+    {
+        CustomizedEventActions.OnRequestSceneLoad -= UpdateScene;
+        CustomizedEventActions.OnRequestUnloadScene -= HideScene;
+    }
+
+    public void UpdateScene(SceneType sceneType)
+    {
+        if (sceneMap.TryGetValue(sceneType, out string sceneName))
         {
-            Destroy(this);
-            return;
+            StartCoroutine(LoadSceneCoroutine(sceneName));
         }
         else
         {
-            Instance = this;
-            //DontDestroyOnLoad(gameObject);
+            Debug.LogError("Scene not mapped: " + sceneType);
         }
     }
 
-    void Start()
+    public void HideScene(SceneType sceneType)
     {
-        
+        if (sceneMap.TryGetValue(sceneType, out string sceneName))
+        {
+            StartCoroutine(UnloadSceneCoroutine(sceneName));
+        }
+        else
+        {
+            Debug.LogError("Scene not mapped: " + sceneType);
+        }
     }
 
-    public void LoadAsyncScene(string sceneName)
+    private IEnumerator LoadSceneCoroutine(string sceneName)
     {
-        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
     }
 
-    public void CloseAsyncScene(string sceneName)
+    private IEnumerator UnloadSceneCoroutine(string sceneName)
     {
-        SceneManager.UnloadSceneAsync(sceneName);
+        yield return SceneManager.UnloadSceneAsync(sceneName);
     }
+}
+
+[System.Serializable]
+public class SceneEntry
+{
+    public SceneType type;
+    public string sceneName;
+}
+
+public static class CustomizedEventActions
+{
+    public static Action<SceneType> OnRequestSceneLoad;
+
+    public static Action<SceneType> OnRequestUnloadScene;
 }
