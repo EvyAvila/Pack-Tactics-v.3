@@ -1,0 +1,16 @@
+{
+    "name": "Kamgam.UIToolkitTextAutoSize",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bf0a928bedc97e743b473b433104c67f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
