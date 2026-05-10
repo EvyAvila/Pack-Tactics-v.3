@@ -13,6 +13,36 @@ MonoBehaviour:
   m_Name: vFolders Data
   m_EditorClassIdentifier: 
   folderDatas_byGuid:
-    keys: []
-    values: []
+    keys:
+    - 24b78ff777c98ca4bb207d9ae6723f62
+    - 0b1b0f59304a1704e967b9d00274492e
+    - 7889b9d44d75d0c4db952b998e84a2c1
+    - 01d96adb33baf884eaf7ce659843281d
+    - c511fb69f34976042a8a510c6dc79b00
+    - d62878c3be8d1684790f0ddbd8cac756
+    values:
+    - iconNameOrGuid: cs Script Icon
+      colorIndex: 10
+      isIconRecursive: 0
+      isColorRecursive: 0
+    - iconNameOrGuid: 
+      colorIndex: 1
+      isIconRecursive: 0
+      isColorRecursive: 0
+    - iconNameOrGuid: SceneAsset Icon
+      colorIndex: 4
+      isIconRecursive: 0
+      isColorRecursive: 0
+    - iconNameOrGuid: 
+      colorIndex: 1
+      isIconRecursive: 0
+      isColorRecursive: 0
+    - iconNameOrGuid: 
+      colorIndex: 10
+      isIconRecursive: 0
+      isColorRecursive: 0
+    - iconNameOrGuid: 
+      colorIndex: 8
+      isIconRecursive: 0
+      isColorRecursive: 0
   bookmarks: []

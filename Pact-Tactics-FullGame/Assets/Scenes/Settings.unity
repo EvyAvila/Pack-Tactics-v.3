@@ -225,6 +225,9 @@ GameObject:
   - component: {fileID: 1987077780}
   - component: {fileID: 1987077779}
   - component: {fileID: 1987077778}
+  - component: {fileID: 1987077783}
+  - component: {fileID: 1987077782}
+  - component: {fileID: 1987077781}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -276,6 +279,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987077781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987077777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf47035f7d8472b46a385208909ef7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowOptionsMain: WindowOptions
+  fullScreen: FullscreenBtn
+  windowed: WindowedBtn
+  screenWidth: 0
+  screenHeight: 0
+--- !u!114 &1987077782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987077777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9475f2d6970dd59448ae0ea82afd9d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fontMain: FontBtn
+  audioMain: AudioBtn
+  windowMain: WindowBtn
+  fontOptionsMain: FontOptions
+--- !u!114 &1987077783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987077777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba5a6ba05645e741a02f262cb1ffa45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioOptionMain: AudioOptions
 --- !u!1 &2036521134
 GameObject:
   m_ObjectHideFlags: 0

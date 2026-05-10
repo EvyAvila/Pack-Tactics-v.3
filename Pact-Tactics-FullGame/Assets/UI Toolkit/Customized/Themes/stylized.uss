@@ -35,3 +35,6 @@
     -unity-background-image-tint-color: rgba(182, 120, 246, 0.84);
     transition-duration: 0.5s;
 }
+
+.sliderOption {
+}

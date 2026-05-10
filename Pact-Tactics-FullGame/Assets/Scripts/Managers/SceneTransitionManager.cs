@@ -10,11 +10,13 @@ public enum SceneType { MainMenu, Gameplay, Settings, Save }
 public class SceneTransitionManager : MonoBehaviour
 {
     //public static SceneTransitionManager Instance;
+    //[SerializeField]
+    //private FadeUI fadeUIEffect; 
 
     [SerializeField]
     private List<SceneEntry> scenes;
 
-    private Dictionary<SceneType, string> sceneMap;
+    public Dictionary<SceneType, string> sceneMap { get; private set; }
 
     private void Awake()
     {
@@ -38,7 +40,7 @@ public class SceneTransitionManager : MonoBehaviour
     {
         if (sceneMap.TryGetValue(sceneType, out string sceneName))
         {
-            StartCoroutine(LoadSceneCoroutine(sceneName));
+            StartCoroutine( LoadSceneCoroutine(sceneName));
         }
         else
         {
@@ -50,11 +52,31 @@ public class SceneTransitionManager : MonoBehaviour
     {
         if (sceneMap.TryGetValue(sceneType, out string sceneName))
         {
-            StartCoroutine(UnloadSceneCoroutine(sceneName));
+            StartCoroutine( UnloadSceneCoroutine(sceneName));
         }
         else
         {
             Debug.LogError("Scene not mapped: " + sceneType);
+        }
+    }
+
+    public IEnumerator ChangeScene(SceneType sceneType)
+    {
+        if (sceneMap.TryGetValue(sceneType, out string sceneName))
+        {
+            yield return LoadSceneCoroutine(sceneName);
+        }
+        else
+        {
+            Debug.LogError("Scene not mapped: " + sceneType);
+        }
+    }
+
+    public IEnumerator RemoveSceneCoroutine(SceneType sceneType)
+    {
+        if (sceneMap.TryGetValue(sceneType, out string sceneName))
+        {
+            yield return UnloadSceneCoroutine(sceneName);  
         }
     }
 
@@ -66,6 +88,7 @@ public class SceneTransitionManager : MonoBehaviour
     private IEnumerator UnloadSceneCoroutine(string sceneName)
     {
         yield return SceneManager.UnloadSceneAsync(sceneName);
+        
     }
 }
 
@@ -79,6 +102,5 @@ public class SceneEntry
 public static class CustomizedEventActions
 {
     public static Action<SceneType> OnRequestSceneLoad;
-
     public static Action<SceneType> OnRequestUnloadScene;
 }
