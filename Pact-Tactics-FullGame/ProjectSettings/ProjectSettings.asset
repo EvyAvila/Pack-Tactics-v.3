@@ -15,7 +15,7 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: Pact-Tactics-FullGame
   defaultCursor: {fileID: 2800000, guid: b0db187a60e0c514cbc472bbadf7dc70, type: 3}
-  cursorHotspot: {x: 0, y: 0}
+  cursorHotspot: {x: 575, y: 600}
   m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
@@ -162,7 +162,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.Pact-Tactics-FullGame
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -879,7 +880,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0

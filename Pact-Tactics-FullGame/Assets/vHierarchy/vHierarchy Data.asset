@@ -15,9 +15,43 @@ MonoBehaviour:
   sceneDatas_byGuid:
     keys:
     - 2b3f5ca9f89eff74897d913ce98819d3
+    - c240e09f8fcb06c48be1743bdc259f09
     values:
     - goDatas_byGlobalId:
         keys: []
         values: []
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-c240e09f8fcb06c48be1743bdc259f09-8790380584632356852-388570785
+        - globalObjectIdString: GlobalObjectId_V1-2-c240e09f8fcb06c48be1743bdc259f09-3416868783655305253-388570785
+        - globalObjectIdString: GlobalObjectId_V1-2-c240e09f8fcb06c48be1743bdc259f09-1987077777-0
+        - globalObjectIdString: GlobalObjectId_V1-2-c240e09f8fcb06c48be1743bdc259f09-2958262985454349538-388570785
+        - globalObjectIdString: GlobalObjectId_V1-2-c240e09f8fcb06c48be1743bdc259f09-8020628925107869965-388570785
+        - globalObjectIdString: GlobalObjectId_V1-2-c240e09f8fcb06c48be1743bdc259f09-2958262986446477828-388570785
+        values:
+        - colorIndex: 2
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 3
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 9
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 0
+          iconNameOrGuid: Favorite
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 0
+          iconNameOrGuid: Favorite
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 0
+          iconNameOrGuid: Canvas Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
   bookmarks: []
   bookmarkedScenePaths: []

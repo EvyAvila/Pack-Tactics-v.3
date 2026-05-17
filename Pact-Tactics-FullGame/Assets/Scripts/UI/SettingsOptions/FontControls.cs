@@ -2,22 +2,83 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Yarn.Unity;
 
 public class FontControls : Controls
 {
     [SerializeField]
-    private string fontMain, audioMain, windowMain, fontOptionsMain;
+    private string fontOptionsMain;
 
-    //Take this out of here. Put in another script
-    public string FontMain { get { return fontMain; } set { fontMain = value; } }
-    public string AudioMain { get { return audioMain; } set { audioMain = value; } }
-    public string WindowMain { get { return windowMain; } set { windowMain = value; } }
+    [SerializeField]
+    private string smallTxt, mediumTxt, largeTxt;
+
+    [SerializeField]
+    private FontSizeEvent fontSizeEvent;
+
+    [SerializeField]
+    private float smallTextSize, mediumTextSize, largeTextSize;
 
     public string FontOptionsMain { get { return fontOptionsMain; } set { fontOptionsMain = value; } }
-    
+
+    public string SmallTxt { get { return smallTxt; } set { smallTxt = value; } }
+    public string MediumTxt { get { return mediumTxt; } set { mediumTxt = value; } }
+    public string LargeTxt { get { return largeTxt; } set { largeTxt = value; } }
+
+    public DialogueRunner dialogueRunner;
+
+    private void Awake()
+    {
+        StopTalking(); //Should this be in Start instead?
+    }
+
+    private void Start()
+    {
+        smallTextSize = smallTextSize == 0 ? 40 : smallTextSize;
+        mediumTextSize = mediumTextSize == 0 ? 80 : mediumTextSize;
+        largeTextSize = largeTextSize == 0 ? 120 : largeTextSize;
+        
+    }
+
     public override void ShowcaseOptions(VisualElement window)
     {
-        base.ShowcaseOptions(window);
+
+        if (!isDisplayed)
+        {
+            window.style.display = DisplayStyle.Flex;
+            Talk();
+        }
+        else
+        {
+            window.style.display = DisplayStyle.None;
+            StopTalking();
+        }
+
+        isDisplayed = !isDisplayed;
+    }
+
+    public void Talk()
+    {
+        dialogueRunner.StartDialogue("Start");
+    }
+
+    public void StopTalking()
+    {
+        dialogueRunner.Stop();
+    }
+
+    public void SetSmallTextSize(ClickEvent evt)
+    {
+        fontSizeEvent.UpdateSizeValue(smallTextSize);
+    }
+
+    public void SetMediumTextSize(ClickEvent evt)
+    {
+        fontSizeEvent.UpdateSizeValue(mediumTextSize);
+    }
+
+    public void SetLargeTextSize(ClickEvent evt)
+    {
+        fontSizeEvent.UpdateSizeValue(largeTextSize);
     }
 }
 

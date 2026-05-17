@@ -38,3 +38,12 @@
 
 .sliderOption {
 }
+
+.volumeBtn {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.volumeBtn:hover {
+    transition-duration: 0.5s;
+    -unity-background-image-tint-color: rgb(141, 141, 141);
+}
