@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public enum GameState { MainMenu, Game, Settings, Pause}
 
@@ -14,6 +17,12 @@ public class StateManager : MonoBehaviour
 
     [SerializeField]
     private bool launchMenuOnStart = true;
+
+    [SerializeField]
+    private FadeUI fadeUIEffect;
+
+    [SerializeField]
+    private SceneTransitionManager sceneManager;
 
 
     private void Awake()
@@ -47,22 +56,33 @@ public class StateManager : MonoBehaviour
         switch (currentState) 
         {
             case GameState.MainMenu:
-                CustomizedEventActions.OnRequestSceneLoad?.Invoke(SceneType.MainMenu);
-                
-                if(SceneManager.GetSceneByName("Game").isLoaded)
-                {
-                    CustomizedEventActions.OnRequestUnloadScene?.Invoke(SceneType.Gameplay);
-                }
+                StartCoroutine(StateTransition(SceneType.MainMenu));
                 break;
 
             case GameState.Game:
-                CustomizedEventActions.OnRequestSceneLoad?.Invoke(SceneType.Gameplay);
-                
-                if (SceneManager.GetSceneByName("Home").isLoaded)
-                {
-                    CustomizedEventActions.OnRequestUnloadScene?.Invoke(SceneType.MainMenu);
-                }
+                StartCoroutine(StateTransition(SceneType.Gameplay));
                 break;
         }
+
     }
+
+    private IEnumerator StateTransition(SceneType state)
+    {
+        yield return fadeUIEffect.FadeIn();
+
+        yield return sceneManager.ChangeScene(state);
+
+        foreach (var s in sceneManager.sceneMap)
+        {
+            if (SceneManager.GetSceneByName(s.Value).isLoaded && s.Key != state)
+            {
+                yield return sceneManager.RemoveSceneCoroutine(s.Key);
+            }
+        }
+
+        yield return fadeUIEffect.FadeOut();
+    }
+
+    
+
 }

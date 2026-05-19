@@ -16,6 +16,8 @@ public class HomeMenu : AbstractMenuBase
         playBtn.RegisterCallback<ClickEvent>(EnterGame);
         settingBtn.RegisterCallback<ClickEvent>(OpenSettings);
         quitBtn.RegisterCallback<ClickEvent>(QuitGame);
+
+        AudioManager.instance.PlayMusic(0);
     }
 
     public override void UnSetProperties()
