@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Linq;
 
-public enum SceneType { MainMenu, Gameplay, Settings, Save }
+public enum SceneType { MainMenu, Gameplay, Settings, Save, PlayerSelection }
 
 public class SceneTransitionManager : MonoBehaviour
 {

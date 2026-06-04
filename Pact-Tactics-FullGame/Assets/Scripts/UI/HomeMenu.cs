@@ -29,7 +29,8 @@ public class HomeMenu : AbstractMenuBase
 
     private void EnterGame(ClickEvent evt)
     {
-        StateManager.Instance.ChangeState(GameState.Game);
+        CustomizedEventActions.OnRequestSceneLoad?.Invoke(SceneType.PlayerSelection);
+        CustomizedEventActions.OnRequestUnloadScene?.Invoke(SceneType.MainMenu);
     }
 
     private void OpenSettings(ClickEvent evt)
