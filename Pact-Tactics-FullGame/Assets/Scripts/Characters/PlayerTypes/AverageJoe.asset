@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08554b5ab8963544ead2ab409d56f0f3, type: 3}
+  m_Name: AverageJoe
+  m_EditorClassIdentifier: 
+  character_Name: 
+  character_Type: Average Joe
+  character_Bio: "Living paycheck to paycheck, working at a corner store in the inner
+    city, the most interesting parts of your day are the faces you commit to memory,
+    and the new faces you have yet to memorize. Life is hard, and you rarely get
+    breaks from its crushing weight, that is, until rumors of a potentially high-profit
+    job start to circulate in your area, offering the kind of money that could have
+    you set for a while. After some thought, you decide now is the big break you\u2019ve
+    been waiting for, and step headfirst into your new career."
+  starting_Node: AverageJoeStart

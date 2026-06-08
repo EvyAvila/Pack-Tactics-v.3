@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08554b5ab8963544ead2ab409d56f0f3, type: 3}
+  m_Name: Corporate
+  m_EditorClassIdentifier: 
+  character_Name: 
+  character_Type: Corporate
+  character_Bio: "You\u2019re not like the other who look for this type of work,
+    looking for their next big break, or to get a hold of as much money as possible.
+    Instead, this gig is much more personal. Recently, you acquired a wealthy client
+    whom you stole from Pawz Bank. Even though you did all the hard work, you never
+    received the recognition or the financial compensation you deserved; instead,
+    your check was cut due to \u201Cbudget cuts\u201D. Running low on ideas, you
+    decide it\u2019s time to take matters into your own hands and prove to Fangs
+    & Finances why they need you more than you need them."
+  starting_Node: CorporateStart

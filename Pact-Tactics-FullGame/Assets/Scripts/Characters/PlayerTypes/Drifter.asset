@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08554b5ab8963544ead2ab409d56f0f3, type: 3}
+  m_Name: Drifter
+  m_EditorClassIdentifier: 
+  character_Name: 
+  character_Type: Drifter
+  character_Bio: "New city, new people, new gigs, a fresh new start to your life.
+    You\u2019re not from around here, only arriving recently in the city, and still
+    adjusting to its many quirks and niches. Pretty soon, you find yourself running
+    low on cash, the price of living in the city\u2019s ecosystem a little higher
+    than you expected. After a couple of dead ends, you finally find a gig offering
+    a big enough score to sate your needs, and after a few preparations, head out
+    to make a name for yourself."
+  starting_Node: DrifterStart
