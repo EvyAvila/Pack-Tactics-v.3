@@ -1,0 +1,119 @@
+﻿//CorporateDialogue
+//title: Choice_0_0
+//---
+//Player: Speak Sample!
+//<<jump Choice_0_0>>
+//===
+
+//Or dialogue1A
+title: CorporateStart
+position: 79,12
+---
+You're not just another face in the dim, smokey corner of the bar.
+
+Unlike the usual crowd of illicit deal hunters and disillusioned street hustlers, you stand out.
+
+You lean against a wooden pillar, sipping a glass of bourbon.
+
+This isn't your usual haunt.
+
+The crisp lines of your tailored suit and your air of polished confidence scream sophistication, creating a stark contrast with the gritty ambiance of the dive bar.
+
+Yet, tonight, necessity outweighs comfort, which is why you find yourself here, waiting for the mysterious figure.
+
+You've made your mark in the city's financial elite, a world of high-stakes deals and cutthroat competition.
+
+But lately, the thrill is gone.
+
+Fangs & Finances used to be your playground, but now, corporate protocals feel suffocating, and your influence is waning.
+
+So, when you heard whispers of an underground Fixer known for her formidable reputation and discretion.
+
+Who only recruits the best of the best.
+
+You decide to take on the daunting task of robbing one of the most secure banks.
+
+You don't wait long before you spot her walking through the door.
+
+She's a striking figure, radiating an undeniable presence with each purposeful step.
+
+Her confident stride and piercing, discerning gaze seem to take in every inch of the bar's surroundings, searching for threats and opportunities alike.
+
+When her eyes finally land on you, she glides acorss the bustling room with purpose, cutting through the haze of  smoke and whispered conversations.
+
+<<jump FirstFixerDiscussion>>
+===
+
+title: FirstFixerDiscussion
+position: 79,237
+---
+Fixer: I take it your are my contact.
+Player: Is that so obvious?
+Fixer: It looks like you're waiting for someone; it also looks like you'd be too scared to scuff your shoes by walking into a bar like this.
+Player: I take it you have a job for me?
+-> I want to make sure this stays between us.
+    <<jump Choice_1_1>>
+-> Listen, I'm willing to get my hands dirty
+    <<jump Choice_1_2>>
+
+===
+
+title: Choice_1_1
+position: 45,462
+---
+Fixer: No need to worry; all offers and jobs remain strictly confidential between me and the client.
+Fixer: However, what you should be concerned about is whether I'm going to take on the job.
+Player: So, you haven't made a decision yet.
+Fixer: No, I have made a decision; I just want to make sure it's still the right one.
+
+The Fixer leads you to a nearby seat, the dim light casting shadows across the room, as you continue your discussion.
+
+Fixer: Why this job at your bank, out of all the banks in this city.
+Player: We have a high-value client who just transferred their safe and money to our bank.
+Player: Of all the safes we have, this is the most valuable one.
+Player: If we can retrieve the money, we'll be set for life.
+Player: Even if we manage to access some of the other safes, there's a solid chance we'll never have to worry about money again.
+Fixer: Why take the risk?
+Player: I'm tired of working hard for money, spending time networking with the elite who rarely acknowledge me because I don't have their wealth.
+-> Will you take the job?
+    <<jump Choice_2_1>>
+-> When we do this job, what's the plan?
+    <<jump Choice_2_2>>
+===
+
+title: Choice_1_2
+position: 325,462
+---
+Fixer: Oh you will.
+Player: What's the plan?
+Player: When are we going to do this?
+Player: Who's on the crew?
+Fixer: Relax, I've orchestrated every detail.
+Fixer: We kick things off in a week.
+Fixer: I've brought together a skilled team of four, each of them trusthworthy and reliable.
+Fixer: That's all you need to know for the moment.
+===
+
+title: Choice_2_1
+position: 12,687
+---
+Fixer: I already have.
+Player: What's the plan?
+Player: When are we going to do this?
+Player: Who's on the crew?
+Fixer: Relax, I've orchestrated every detail.
+Fixer: We kick things off in a week.
+Fixer: I've brought together a skilled team of four, each of them trusthworthy and reliable.
+Fixer: That's all you need to know for the moment.
+===
+
+title: Choice_2_2
+position: 292,687
+---
+Player: When are we going to do this?
+Player: Who's on the crew?
+Fixer: Relax, I've orchestrated every detail.
+Fixer: We kick things off in a week.
+Fixer: I've brought together a skilled team of four, each of them trusthworthy and reliable.
+Fixer: That's all you need to know for the moment.
+===

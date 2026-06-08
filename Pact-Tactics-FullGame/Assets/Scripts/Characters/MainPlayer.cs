@@ -9,6 +9,8 @@ public class MainPlayer : MonoBehaviour
     [SerializeField]
     private Character mainCharacter;
 
+    public Character character { get { return mainCharacter; } set { mainCharacter = value; } }
+
     private void Awake()
     {
         if(instance == null)
