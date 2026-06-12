@@ -122,6 +122,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &75373472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75373474}
+  - component: {fileID: 75373473}
+  m_Layer: 0
+  m_Name: TrustSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &75373473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75373472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b648924283698e4aaa9e0e28a1607a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueRunner: {fileID: 1930628310}
+  npcList:
+  - {fileID: 11400000, guid: 18424eee60fc27949a33bf5910ccf08f, type: 2}
+  - {fileID: 11400000, guid: 374c0fc9d3b04b44abcd49e9b617fc21, type: 2}
+  resetCurrentTrustLevel: 1
+  isAllowToEnterNegativeTrustLevel: 1
+  isAllowToGoOverMaxTrustLevel: 1
+--- !u!4 &75373474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75373472}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.470297, y: -11.811123, z: -0.46033123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1011546638
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 1930628310}
   milliseconds: 2000
+  setTimer: 1
 --- !u!1001 &1930628307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,6 +382,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1626146192260294248, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_LayoutPriority
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2958262985454349539, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_SizeDelta.x
       value: -670.11
@@ -466,13 +522,17 @@ PrefabInstance:
       propertyPath: m_enableWordWrapping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8150228081625468094, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: autoStart
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: CorporateStart
+      value: StartTest
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
@@ -640,3 +700,4 @@ SceneRoots:
   - {fileID: 1087310049}
   - {fileID: 1930628307}
   - {fileID: 1769138856}
+  - {fileID: 75373474}

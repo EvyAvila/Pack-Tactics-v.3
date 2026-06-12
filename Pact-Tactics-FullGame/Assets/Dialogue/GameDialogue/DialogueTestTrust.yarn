@@ -1,0 +1,25 @@
+﻿
+title: StartTest
+---
+<<declare $currentTrust = 0>>
+//TrustLevel
+
+<<StartPoint TrustSystem NPC>>
+This is a starting test for dialogue 
+
+NPC: This is my current trust level: {$currentTrust}
+//Trust  level
+
+Player: I am going to make a choice and have it effect
+
+-> I want to increase the trust level
+    //Increase
+    <<Increase TrustSystem NPC>>
+-> I want to decrease the trust level
+    //Decrease
+    <<Decrease TrustSystem NPC>>
+
+NPC: This is the updated trust level: {$currentTrust}
+//Updated Trust level
+===
+

@@ -12,13 +12,22 @@ public class GameDialogueSetUp : MonoBehaviour
     [SerializeField]
     private int milliseconds = 3000;
 
-    //LEFT OFF
+    [SerializeField]
+    private bool setTimer;
+
+     
     void Start()
     {
-        WaitTime();
+        if (setTimer)
+        {
+            WaitTime();
+        }
+        
     }
 
 
+    //TODO - Wait for the fade in to finish and then wait a second before
+    //Potential idea: having a public bool that is set to true to being finished, apply function
     private async void WaitTime()
     {
         await Task.Delay(milliseconds);
