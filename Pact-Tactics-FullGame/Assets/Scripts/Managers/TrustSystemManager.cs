@@ -16,6 +16,9 @@ public class TrustSystemManager : MonoBehaviour
     [SerializeField]
     private bool isAllowToEnterNegativeTrustLevel, isAllowToGoOverMaxTrustLevel;
 
+    [SerializeField]
+    private TrustPopUpMenu popUpMenu;
+
     void Awake()
     {
         
@@ -42,7 +45,7 @@ public class TrustSystemManager : MonoBehaviour
     public void Increase(string name)
     {
         int pos = npcList.FindIndex(x => x.characterName == name);
-
+        popUpMenu.SetText(trustState.Increase);
 
         if(isAllowToGoOverMaxTrustLevel)
         {
@@ -67,8 +70,8 @@ public class TrustSystemManager : MonoBehaviour
     public void Decrease(string name)
     {
         int pos = npcList.FindIndex(x => x.characterName == name);
-
-        if(isAllowToEnterNegativeTrustLevel)
+        popUpMenu.SetText(trustState.Decrease);
+        if (isAllowToEnterNegativeTrustLevel)
         {
             npcList[pos].currentTrust--;
         }

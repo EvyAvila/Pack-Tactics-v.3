@@ -22,4 +22,3 @@ Player: I am going to make a choice and have it effect
 NPC: This is the updated trust level: {$currentTrust}
 //Updated Trust level
 ===
-
