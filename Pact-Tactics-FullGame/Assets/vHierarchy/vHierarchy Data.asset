@@ -17,6 +17,7 @@ MonoBehaviour:
     - 2b3f5ca9f89eff74897d913ce98819d3
     - c240e09f8fcb06c48be1743bdc259f09
     - d1da8c3fdc5a98546ad82c9f59fda343
+    - 45b3b4725495b3045b7b4ea1c88e9ac2
     values:
     - goDatas_byGlobalId:
         keys: []
@@ -65,6 +66,34 @@ MonoBehaviour:
           isColorRecursive: 0
         - colorIndex: 9
           iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-45b3b4725495b3045b7b4ea1c88e9ac2-1389862037-0
+        - globalObjectIdString: GlobalObjectId_V1-2-45b3b4725495b3045b7b4ea1c88e9ac2-1450460090-0
+        - globalObjectIdString: GlobalObjectId_V1-2-45b3b4725495b3045b7b4ea1c88e9ac2-867644970-0
+        - globalObjectIdString: GlobalObjectId_V1-2-45b3b4725495b3045b7b4ea1c88e9ac2-1615924746-0
+        - globalObjectIdString: GlobalObjectId_V1-2-45b3b4725495b3045b7b4ea1c88e9ac2-1096562295-0
+        values:
+        - colorIndex: 2
+          iconNameOrGuid: cs Script Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 3
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 3
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 4
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 7
+          iconNameOrGuid: Favorite
           isIconRecursive: 0
           isColorRecursive: 0
   bookmarks: []
